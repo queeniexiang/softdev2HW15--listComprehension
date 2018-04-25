@@ -1,3 +1,10 @@
+"""
+Queenie Xiang
+SoftDev2 pd7
+HW15 -- List Comprehension
+2018-04-25
+"""
+
 #Uses list comprehension to return whether a password meets a minimum threshold:
 #It contains a mixture of upper and lowercase letters, and at least one number
 
