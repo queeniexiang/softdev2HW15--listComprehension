@@ -61,12 +61,8 @@ def check_strength(password):
     converted = [1 for x in password if x in UC_LETTERS]
     converted += [1 for x in password if x in LC_LETTERS] 
     converted += [1 for x in password if x in NUMBERS]
+    #Chars will be add more to the strength of the password 
     converted += [2 for x in password if x in NUMBERS]
-
-    upperCount = 0
-    lowerCount = 0
-    charCount = 0
-    numCount = 0
 
     strength = 0
 
@@ -81,14 +77,25 @@ def check_strength(password):
     
 
 
-password = "NinjaUnicorn123"
+#Test cases:
+password1 = "NinjaUnicorn123@@@***"
 password2 = "pew"
 password3 = "bad"
 password4 = "Green!67"
-password5="GrV1@"
+password5 = "GrV1@!"
 
+print "\n*** Password strengths (1 weakest - 10 strongest): ***" 
+print "'NinjaUnicorn123@@@***' strength:"
+print check_strength(password1)
+
+print "'pew' strength:"
+print check_strength(password2)
+
+print "'bad' strength:"
+print check_strength(password3)
+
+"'Green!67' strength:"
 print check_strength(password4)
-print check_strength(password2)
-print check_strength(password2)
-print check_strength(password)
+
+print "'GrV1@!' strength:"
 print check_strength(password5) 
